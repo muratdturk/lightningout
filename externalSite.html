@@ -1,0 +1,31 @@
+<html>
+    <style>
+        a {
+            color: orange;
+        }
+    </style>
+    <script src="https://speed-app-3441-dev-ed.scratch.lightning.force.com/lightning/lightning.out.js"></script>  <!-- https://speed-app-3441-dev-ed.scratch.my.site.com -->
+    <div data-lightning-out="true"></div>
+    <script>
+      const appName = 'c:LWCWrapper';
+      const componentName = 'c:updateContact';
+      const lightningEndpoint = 'https://speed-app-3441-dev-ed.scratch.lightning.force.com';
+      const targetElement = document.querySelector("[data-lightning-out]");
+      const componentAttributes = {};
+  
+      $Lightning.use(
+              appName,
+              function (){
+                $Lightning.createComponent(
+                        componentName,
+                        componentAttributes,
+                        targetElement,
+                        function (cmp){
+                          console.log('lightning component created');
+                        }
+                );
+              },
+              lightningEndpoint
+      );
+      </script>
+</html>
