@@ -4,15 +4,19 @@
             color: orange;
         }
     </style>
-    <script src="https://speed-app-3441-dev-ed.scratch.my.site.com/contacts/lightning/lightning.out.js"></script>  <!-- https://speed-app-3441-dev-ed.scratch.my.site.com -->
+    <script src="https://speed-app-3441-dev-ed.scratch.my.site.com/contacts/lightning/lightning.out.js"></script> 
     <div data-lightning-out="true"></div>
     <script>
+//       const appName = 'LWCWrapper'; this is for managed package. otherwise use 'c:' as below 
       const appName = 'c:LWCWrapper';
       const componentName = 'c:updateContact';
       const lightningEndpoint = 'https://speed-app-3441-dev-ed.scratch.my.site.com/contacts';
+      const authToken = 'a93302ae02ac53d8a370b12c04a04463a3d9223f627fb9403afc66c43cc8e0f668852ef99b6ebf6431febead7e47791ac7f25a003fddf8882fcc420f8ff76c683b180863dc0cc71c8c8c788e51757943e118b4eacb05f0cd5f9e2e81626c579f05450bf8a0ae68f53643bbd5341faaaf38dd80e9c2a0:7844dc92cfe876535b7c13b637535c6d';
+      const sessionId = 'abcd';
       const targetElement = document.querySelector("[data-lightning-out]");
       const componentAttributes = {'recordId': 'test input'};
   
+// https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/lightning_out_markup.htm        
       $Lightning.use(
               appName,
               function (){
@@ -25,7 +29,8 @@
                         }
                 );
               },
-              lightningEndpoint
+              lightningEndpoint,
+              authToken
       );
       </script>
 </html>
