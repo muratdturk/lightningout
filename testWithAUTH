@@ -1,0 +1,36 @@
+<html>
+    <style>
+        a {
+            color: orange;
+        }
+    </style>
+    <script src="https://speed-app-3441-dev-ed.scratch.my.site.com/contacts/lightning/lightning.out.js"></script> 
+    <div data-lightning-out="true"></div>
+    <script>
+//       const appName = 'LWCWrapper'; this is for managed package. otherwise use 'c:' as below 
+      const appName = 'c:LWCWrapper';
+      const componentName = 'c:updateContact';
+      const lightningEndpoint = 'https://speed-app-3441-dev-ed.scratch.my.site.com/contacts';
+      const authToken = '!AQsAQFd9p4QbQISa9dmHOlbe2vnNcsv_NuP5rcayaVS7bNXynrG.KRskwBqhi.p5kN44HWUd.DdLNETB1yT_XBokcv9dAaza';
+      const sessionId = 'abcd';
+      const targetElement = document.querySelector("[data-lightning-out]");
+      const componentAttributes = {'recordId': 'test input'};
+  
+// https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/lightning_out_markup.htm        
+      $Lightning.use(
+              appName,
+              function (){
+                $Lightning.createComponent(
+                        componentName,
+                        componentAttributes,
+                        targetElement,
+                        function (cmp){
+                          console.log('lightning component created');
+                        }
+                );
+              },
+              lightningEndpoint,
+              authToken
+      );
+      </script>
+</html>
