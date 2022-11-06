@@ -6,7 +6,7 @@ const init = function(){
 const appName = 'c:LWCWrapper';
 const componentName = 'c:updateContact';
 const lightningEndpoint = 'https://speed-app-3441-dev-ed.scratch.lightning.force.com';
-const targetElement = document.querySelector("[data-lightning-out]");
+let targetElement = document.querySelector("[data-lightning-out]");
 const componentAttributes = {'recordId': 'test input'};
 
 function submit(ev) {
