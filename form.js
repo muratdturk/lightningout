@@ -18,10 +18,11 @@ function submit(ev) {
 }
 
 function showLightningPage(accessToken, brandId, recordId) {
-    console.log('accessToken:  ' + accessToken);
-    console.log('brandId:  ' + brandId);
+    // console.log('accessToken:  ' + accessToken);
+    // console.log('brandId:  ' + brandId);
     let targetElement = document.querySelector("[data-lightning-out]");
     componentAttributes.recordId = recordId;
+    componentAttributes.brandId = brandId;
 
     $Lightning.use(
             appName,
