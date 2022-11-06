@@ -35,7 +35,7 @@ function showLightningPage(accessToken, brandId) {
               );
             },
             lightningEndpoint,
-            authToken
+            accessToken
     );
 
 
