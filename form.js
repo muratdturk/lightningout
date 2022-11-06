@@ -3,6 +3,11 @@ const init = function(){
     document.getElementById('submit-button').addEventListener('click', submit);
 }
 
+const appName = 'c:LWCWrapper';
+const componentName = 'c:updateContact';
+const lightningEndpoint = 'https://speed-app-3441-dev-ed.scratch.lightning.force.com';
+const targetElement = document.querySelector("[data-lightning-out]");
+const componentAttributes = {'recordId': 'test input'};
 
 function submit(ev) {
     ev.preventDefault();
@@ -17,11 +22,7 @@ function showLightningPage(accessToken, brandId) {
     console.log('accessToken:  ' + accessToken);
     console.log('brandId:  ' + brandId);
 
-    let appName = 'c:LWCWrapper';
-    let componentName = 'c:updateContact';
-    let lightningEndpoint = 'https://speed-app-3441-dev-ed.scratch.lightning.force.com';
-    let targetElement = document.querySelector("[data-lightning-out]");
-    let componentAttributes = {'recordId': 'test input'};
+
     $Lightning.use(
             appName,
             function (){
