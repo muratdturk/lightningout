@@ -1,45 +1,9 @@
 <html>
     <script src="https://speed-app-3441-dev-ed.scratch.lightning.force.com/lightning/lightning.out.js"></script> 
-    <script>
-      const appName = 'c:LWCWrapper';
-      const componentName = 'c:updateContact';
-      const lightningEndpoint = 'https://speed-app-3441-dev-ed.scratch.lightning.force.com';
-      const authToken = '!AQsojt';
-      const sessionId = 'abcd';
-      const targetElement = document.querySelector("[data-lightning-out]");
-      const componentAttributes = {'recordId': 'test input'};
-      $Lightning.use(
-              appName,
-              function (){
-                $Lightning.createComponent(
-                        componentName,
-                        componentAttributes,
-                        targetElement,
-                        function (cmp){
-                          console.log('lightning component created');
-                        }
-                );
-              },
-              lightningEndpoint,
-              authToken
-      );
-      </script>
-    
-<script>
-    const form = document.forms[0];
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
-      const { name, description, task } = this.elements;
-      // or
-      // const { name, description, task } = event.target.elements;
-      console.log('wowwwww');
-      console.log(name.value, description.value, task.value);
-    });
-</script>
-    
-<h2>LWC inputs</h2>
+    <script src="./form.js"></script>
+<h2>LWC input</h2>
 <!-- <form action="/action_page.php"> -->
-<form>
+<form id="lo-form" action="#" method="post">
   <div>
       <label for="accessToken">Access Token:</label><br>
       <input type="text" id="accessToken" name="accessToken" value=""><br>
@@ -48,10 +12,15 @@
       <label for="brandId">Brand Id:</label><br>
       <input type="text" id="brandId" name="brandId" value=""><br><br>
   </div>
-  <input type="submit" value="Submit">
+  <div>  
+    <!-- <button id="reset-button">Reset</button> -->
+    <button id="submit-button">Submit</button>
+  </div>
 </form>  
+
+<!-- <button onclick="refresh()">Refrest</button> -->
    
-<!--     <div data-lightning-out="true"></div> -->
+    <div data-lightning-out="true"></div>
     
-    
+    <!-- <p id="at"></p> -->
 </html>
