@@ -22,7 +22,6 @@ function showLightningPage(accessToken, brandId) {
     console.log('accessToken:  ' + accessToken);
     console.log('brandId:  ' + brandId);
 
-
     $Lightning.use(
             appName,
             function (){
