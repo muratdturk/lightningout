@@ -1,13 +1,6 @@
 <html>
-    <style>
-        a {
-            color: orange;
-        }
-    </style>
     <script src="https://speed-app-3441-dev-ed.scratch.lightning.force.com/lightning/lightning.out.js"></script> 
-    <div data-lightning-out="true"></div>
     <script>
-//       const appName = 'LWCWrapper'; this is for managed package. otherwise use 'c:' as below 
       const appName = 'c:LWCWrapper';
       const componentName = 'c:updateContact';
       const lightningEndpoint = 'https://speed-app-3441-dev-ed.scratch.lightning.force.com';
@@ -15,9 +8,6 @@
       const sessionId = 'abcd';
       const targetElement = document.querySelector("[data-lightning-out]");
       const componentAttributes = {'recordId': 'test input'};
-         
-            
-// https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/lightning_out_markup.htm        
       $Lightning.use(
               appName,
               function (){
@@ -49,15 +39,20 @@
     
    <h2>HTML Forms</h2>
 
-<!-- <form action="/action_page.php"> --> -->
+<!-- <form action="/action_page.php"> -->
 <form>
-  <label for="accessToken">Access Token:</label><br>
-  <input type="text" id="fname" name="fname" value=""><br>
-  <label for="brandId">Brand Id:</label><br>
-  <input type="text" id="lname" name="lname" value=""><br><br>
+  <div>
+      <label for="accessToken">Access Token:</label><br>
+      <input type="text" id="fname" name="fname" value=""><br>
+  </div>
+  <div>
+      <label for="brandId">Brand Id:</label><br>
+      <input type="text" id="lname" name="lname" value=""><br><br>
+  </div>
   <input type="submit" value="Submit">
 </form>  
-    
+   
+<!--     <div data-lightning-out="true"></div> -->
     
     
 </html>
