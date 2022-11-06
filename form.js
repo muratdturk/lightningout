@@ -6,15 +6,13 @@ const init = function(){
 const appName = 'c:LWCWrapper';
 const componentName = 'c:updateContact';
 const lightningEndpoint = 'https://speed-app-3441-dev-ed.scratch.lightning.force.com';
-const componentAttributes = {'recordId': 'test input', 'brandId' : 'default'};
+let componentAttributes = {'recordId': 'test input', 'brandId' : 'default'};
 
 function submit(ev) {
     ev.preventDefault();
     let accessToken = document.getElementById("accessToken").value;
     let brandId = document.getElementById("brandId").value;
     let recordId = document.getElementById("recordId").value;
-    
-
     showLightningPage(accessToken, brandId, recordId);
 
 }
@@ -23,7 +21,7 @@ function showLightningPage(accessToken, brandId, recordId) {
     console.log('accessToken:  ' + accessToken);
     console.log('brandId:  ' + brandId);
     let targetElement = document.querySelector("[data-lightning-out]");
-    componentAttributes.recordId = "new Id";
+    componentAttributes.recordId = recordId;
 
     $Lightning.use(
             appName,
