@@ -19,7 +19,6 @@ function submit(ev) {
     let recordId = document.getElementById("recordId").value;
     let variantManagedByExternalInput = document.getElementById("variantManagedByExternalInput").value;
     showLightningPage(accessToken, brandId, recordId, variantManagedByExternalInput);
-
 }
 
 function showLightningPage(accessToken, brandId, recordId, variantManagedByExternalInput) {
