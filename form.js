@@ -44,9 +44,6 @@ function showLightningPage(accessToken, brandId, recordId, variantManagedByExter
             lightningEndpoint,
             accessToken
     );
-
-
-
 }
 
 
