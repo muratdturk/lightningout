@@ -1,0 +1,31 @@
+<html>
+    <style>
+        a {
+            color: orange;
+        }
+    </style>
+    <script src="https://martinguitar--cfmfull.sandbox.my.site.com/partialSignup/lightning/lightning.out.js"></script>
+    <div data-lightning-out="true"></div>
+    <script>
+      const appName = 'c:PartialSignupWrapper';
+      const componentName = 'c:partialSignup';
+      const lightningEndpoint = 'https://martinguitar--cfmfull.sandbox.my.site.com/partialSignup';
+      const targetElement = document.querySelector("[data-lightning-out]");
+      const componentAttributes = {};
+  
+      $Lightning.use(
+              appName,
+              function (){
+                $Lightning.createComponent(
+                        componentName,
+                        componentAttributes,
+                        targetElement,
+                        function (cmp){
+                          console.log('lightning component created');
+                        }
+                );
+              },
+              lightningEndpoint
+      );
+      </script>
+</html>
